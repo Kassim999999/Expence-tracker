@@ -10,6 +10,7 @@ const Form = () => {
             <input type="text" placeholder='Category'/>
             <input type="number" placeholder='Amount'/>
             <input type="text" />
+            <button type='submit'>Submit</button>
         </form>
     </div>
   )
