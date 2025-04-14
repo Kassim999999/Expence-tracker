@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+:root{
+  --header-font: "Lilita One",sans-serif;
+}
+
+h1,h2{
+  font-family: var(--header-font);
 }
