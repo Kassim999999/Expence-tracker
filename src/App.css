@@ -46,3 +46,25 @@
 h1,h2{
   font-family: var(--header-font);
 }
+
+#form-container{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form{
+ 
+  gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+  background-color: black;
+  color: aliceblue;
+}
