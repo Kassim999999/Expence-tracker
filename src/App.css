@@ -68,3 +68,8 @@ h1,h2{
   background-color: black;
   color: aliceblue;
 }
+
+#finder{
+  display: flex;
+  flex-direction: row;
+}
