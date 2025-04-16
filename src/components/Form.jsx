@@ -20,7 +20,7 @@ const Form = ({ onAddExpense }) => {
   function handleSubmit(event) {
     event.preventDefault();
     onAddExpense(formContent); 
-    setFormContent({ name: '', description: '', category: '', amount: '', date: '' }); // Clear form
+    setFormContent({ name: '', description: '', category: '', amount: '', date: '' });
   }
 
   return (
