@@ -1,8 +1,23 @@
 import React from 'react'
 
-const Table = () => {
+const Table = ({searchTerm, expenses= []}) => {
+
+    function handleChange(event) {
+        console.log(event.target.value);
+        
+    }
+    function handleDelete(event) {
+        console.log(event);
+        
+    }
   return (
-    <div>
+    <div className='table'>
+        <input className='finder' 
+        type="text" 
+        placeholder='Search Expenses...' 
+        value={searchTerm}
+        onChange={handleChange}
+        />
         <table>
             <thead>
                 <tr>
@@ -13,6 +28,28 @@ const Table = () => {
                     <th>Date</th>
                 </tr>
             </thead>
+            <tbody>
+                {expenses.filter((expense)=>{
+                const term = searchTerm.toLowerCase();
+                return(
+                    expense.name.toLowerCase().includes(term) ||
+                    expense.description.toLowerCase().includes(term)
+                )
+                })
+                .map((expense, index) => (
+                <tr key={index}>
+                    <td>{expense.name}</td>
+                    <td>{expense.description}</td>
+                    <td>{expense.category}</td>
+                    <td>{expense.amount}</td>
+                    <td>{expense.date}</td>
+                    <td>
+                        <button onClick={handleDelete}>Delete</button>
+                    </td>
+                </tr>
+            ))
+                }
+            </tbody>
         </table>
     </div>
   )

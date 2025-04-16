@@ -47,18 +47,20 @@ h1,h2{
   font-family: var(--header-font);
 }
 
+
+
 #form-container{
-  border: 2px solid black;
-  border-radius: 10px;
-  width: 300px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
+  
 }
 
 
 .form{
- 
+  border: 2px solid black;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
   gap: 20px;
     display: flex;
     flex-direction: column;
@@ -69,7 +71,22 @@ h1,h2{
   color: aliceblue;
 }
 
-#finder{
+.finder{
   display: flex;
   flex-direction: row;
+  height: 25px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.table{
+  display: flex;
+  flex-direction:column;
+  padding-top: 150px;
+
+}
+
+#Container{
+  display: flex;
+
 }
