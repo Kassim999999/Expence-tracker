@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Table = ({searchTerm, expenses= [], onDeleteExpense}) => {
+const Table = ({searchTerm, expenses= [], onDeleteExpense, onSearchChange}) => {
 
     function handleChange(event) {
-        console.log(event.target.value);
+        onSearchChange(event.target.value);
         
     }
     function handleDelete(index) {
