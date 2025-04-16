@@ -11,13 +11,20 @@ function App() {
     setExpenses((prevExpenses) => [...prevExpenses, newExpense]);
   };
 
+   const deleteExpense = (indexToRemove) => {
+    setExpenses((prev) => prev.filter((_, i) => i !== indexToRemove));
+  };
+
   return (
     <div id='Container'>
       <Form onAddExpense={addExpense}/>
       
       <Table  searchTerm={searchTerm} 
         expenses={expenses} 
-        onSearchChange={setSearchTerm}/>
+        onSearchChange={setSearchTerm}
+        onDeleteExpense={deleteExpense}
+        />
+       
     </div>
   
   );

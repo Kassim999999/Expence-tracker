@@ -90,3 +90,7 @@ h1,h2{
   display: flex;
 
 }
+
+#trash{
+  color: red;
+}

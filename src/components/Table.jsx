@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Table = ({searchTerm, expenses= []}) => {
+const Table = ({searchTerm, expenses= [], onDeleteExpense}) => {
 
     function handleChange(event) {
         console.log(event.target.value);
         
     }
-    function handleDelete(event) {
-        console.log(event);
+    function handleDelete(index) {
+        console.log(index);
+        onDeleteExpense(index)
         
     }
   return (
@@ -44,7 +45,7 @@ const Table = ({searchTerm, expenses= []}) => {
                     <td>{expense.amount}</td>
                     <td>{expense.date}</td>
                     <td>
-                        <button onClick={handleDelete}>Delete</button>
+                        <button id='trash' onClick={()=>handleDelete(index)}><i className="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
             ))
